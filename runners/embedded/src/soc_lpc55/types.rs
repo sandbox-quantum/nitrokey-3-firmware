@@ -37,7 +37,7 @@ pub static mut DEVICE_UUID: [u8; 16] = [0u8; 16];
 #[cfg(feature = "no-encrypted-storage")]
 use lpc55_hal::littlefs2_filesystem;
 #[cfg(feature = "no-encrypted-storage")]
-use trussed::types::LfsResult;
+//use trussed::types::LfsResult;
 
 #[cfg(feature = "no-encrypted-storage")]
 littlefs2_filesystem!(InternalFilesystem: (prince::FS_START, prince::BLOCK_COUNT));
