@@ -447,8 +447,8 @@ impl Stage2 {
         static NFC_CHANNEL: CcidChannel = Channel::new();
         let (nfc_rq, nfc_rp) = NFC_CHANNEL.split().unwrap();
 
-        let se050_i2c = (!self.clocks.is_nfc_passive).then(|| self.get_se050_i2c(flexcomm5));
-
+        //let se050_i2c = (!self.clocks.is_nfc_passive).then(|| self.get_se050_i2c(flexcomm5));
+        let se050_i2c = None;
         let use_nfc = nfc_enabled && (cfg!(feature = "provisioner") || self.clocks.is_nfc_passive);
         let (nfc, spi) = if use_nfc {
             let spi = self.setup_spi(flexcomm0, SpiConfig::Nfc);
