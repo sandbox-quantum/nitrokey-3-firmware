@@ -41,10 +41,10 @@ trussed-usbip = { git = "https://github.com/Nitrokey/pc-usbip-runner.git", tag =
 trussed-se050-backend = { git = "https://github.com/Nitrokey/trussed-se050-backend.git", tag = "v0.1.0-test-driver" }
 
 # Fido2 PQC
-ctap-types = { path = "../nitrokey-pqc/ctap-types" }
-fido-authenticator = { path = "../nitrokey-pqc/fido-authenticator" }
-trussed = { path = "../nitrokey-pqc/trussed" }
-usbd-ctaphid = { path = "../nitrokey-pqc/usbd-ctaphid" }
+ctap-types = { git = "https://github.com/sandbox-quantum/ctap-types_fork", branch = "nitrokey-pqc-fido2" }
+fido-authenticator = { git = "https://github.com/sandbox-quantum/fido-authenticator_fork", branch = "nitrokey-pqc-fido2" }
+trussed = { git = "https://github.com/sandbox-quantum/trussed_fork", branch = "nitrokey-pqc-fido2" }
+usbd-ctaphid = { git = "https://github.com/sandbox-quantum/usbd-ctaphid_fork", branch = "nitrokey-pqc-fido2" }
 
 [profile.release]
 codegen-units = 1

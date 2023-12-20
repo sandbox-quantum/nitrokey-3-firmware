@@ -731,6 +731,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "cosey"
+version = "0.3.0"
+source = "git+https://github.com/sandbox-quantum/cosey_fork?branch=pqc_kyber768_dilithium3#9b19f0d82097990a93f640697ae51f478bd91e1a"
+dependencies = [
+ "heapless-bytes 0.3.0",
+ "serde",
+ "serde_repr",
+]
+
+[[package]]
 name = "cpufeatures"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -833,11 +843,11 @@ dependencies = [
 [[package]]
 name = "ctap-types"
 version = "0.1.2"
-source = "git+https://github.com/Nitrokey/ctap-types?tag=v0.1.2-nitrokey.4#702b5b5248f88091b22c46c936cb0f99425c0a61"
+source = "git+https://github.com/sandbox-quantum/ctap-types_fork?branch=nitrokey-pqc-fido2#57009a31cd52999e887d8096945b4361ba5baf2a"
 dependencies = [
  "bitflags 1.3.2",
  "cbor-smol",
- "cosey 0.3.0",
+ "cosey 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "delog",
  "heapless 0.7.16",
  "heapless-bytes 0.3.0",
@@ -1178,15 +1188,19 @@ dependencies = [
 [[package]]
 name = "fido-authenticator"
 version = "0.1.1"
-source = "git+https://github.com/Nitrokey/fido-authenticator.git?tag=v0.1.1-nitrokey.8#f4cf88ae9e32c6da587fa87a67ea1522fbd80cb6"
+source = "git+https://github.com/sandbox-quantum/fido-authenticator_fork?branch=nitrokey-pqc-fido2#56d5804c20e33de3e40edf30c5090eb70483cc7c"
 dependencies = [
  "apdu-dispatch",
+ "cbor-smol",
+ "cosey 0.3.0 (git+https://github.com/sandbox-quantum/cosey_fork?branch=pqc_kyber768_dilithium3)",
  "ctap-types",
  "ctaphid-dispatch",
  "delog",
  "heapless 0.7.16",
  "interchange 0.2.2",
  "iso7816",
+ "pqclean",
+ "rand",
  "serde",
  "serde-indexed",
  "serde_cbor",
@@ -2380,6 +2394,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5b40af805b3121feab8a3c29f04d8ad262fa8e0561883e7653e024ae4479e6de"
 
 [[package]]
+name = "pqclean"
+version = "0.1.0"
+source = "git+https://github.com/sandbox-quantum/fido-authenticator_fork?branch=nitrokey-pqc-fido2#56d5804c20e33de3e40edf30c5090eb70483cc7c"
+dependencies = [
+ "cty",
+ "libc",
+]
+
+[[package]]
 name = "pretty_env_logger"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2672,7 +2695,7 @@ version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "77cdd38ed8bfe51e53ee991aae0791b94349d0a05cfdecd283835a8a965d4c37"
 dependencies = [
- "cosey 0.3.0",
+ "cosey 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ed25519 1.5.3",
  "subtle",
  "zeroize",
@@ -2684,7 +2707,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b947325a585e90733e0e9ec097228f40b637cc346f9bd68f84d5c6297d0fcfef"
 dependencies = [
- "cosey 0.3.0",
+ "cosey 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ed25519 2.2.3",
  "subtle",
  "zeroize",
@@ -3259,7 +3282,7 @@ dependencies = [
 [[package]]
 name = "trussed"
 version = "0.1.0"
-source = "git+https://github.com/trussed-dev/trussed.git?rev=d97c64d0bc5f83ce22b0e0ed034a2b451616b3f9#d97c64d0bc5f83ce22b0e0ed034a2b451616b3f9"
+source = "git+https://github.com/sandbox-quantum/trussed_fork?branch=nitrokey-pqc-fido2#6f1e74967e6ab59c5fc25db842d5c4509d9145b9"
 dependencies = [
  "aes",
  "bitflags 2.4.1",
@@ -3268,7 +3291,7 @@ dependencies = [
  "cfg-if",
  "chacha20 0.9.1",
  "chacha20poly1305",
- "cosey 0.3.0",
+ "cosey 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "delog",
  "des",
  "embedded-hal",
@@ -3505,7 +3528,7 @@ dependencies = [
 [[package]]
 name = "usbd-ctaphid"
 version = "0.1.0"
-source = "git+https://github.com/Nitrokey/usbd-ctaphid.git?tag=v0.1.0-nitrokey.2#3f24df2f8b799eb203539c0e723854e8f7739f79"
+source = "git+https://github.com/sandbox-quantum/usbd-ctaphid_fork?branch=nitrokey-pqc-fido2#115543e02ef58dc8effdf00bc1e243a1f14cc23b"
 dependencies = [
  "ctap-types",
  "ctaphid-dispatch",
