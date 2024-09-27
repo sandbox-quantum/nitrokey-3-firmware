@@ -21,7 +21,8 @@ admin-app = { git = "https://github.com/Nitrokey/admin-app.git", tag = "v0.1.0-n
 cbor-smol = { git = "https://github.com/Nitrokey/cbor-smol.git", tag = "v0.4.0-nitrokey.4"}
 fido-authenticator = { git = "https://github.com/Nitrokey/fido-authenticator.git", tag = "v0.1.1-nitrokey.19" }
 lpc55-hal = { git = "https://github.com/Nitrokey/lpc55-hal", tag = "v0.3.0-nitrokey.2" }
-trussed = { git = "https://github.com/nitrokey/trussed.git", tag = "v0.1.0-nitrokey.21" }
+#trussed = { git = "https://github.com/nitrokey/trussed.git", tag = "v0.1.0-nitrokey.21" }
+trussed = { path = "../trussed"} # TODO: revert to remote
 
 # unreleased upstream changes
 apdu-dispatch = { git = "https://github.com/Nitrokey/apdu-dispatch.git", tag = "v0.1.2-nitrokey.3" }
@@ -49,6 +50,9 @@ trussed-rsa-alloc = { git = "https://github.com/trussed-dev/trussed-rsa-backend.
 trussed-usbip = { git = "https://github.com/Nitrokey/pc-usbip-runner.git", tag = "v0.0.1-nitrokey.4" }
 trussed-se050-manage = { git = "https://github.com/Nitrokey/trussed-se050-backend.git", tag = "se050-manage-v0.1.0" }
 trussed-se050-backend = { git = "https://github.com/Nitrokey/trussed-se050-backend.git", tag ="v0.3.5" }
+
+# TODO: revert to remote
+trussed-pqc-backend = { path = "../trussed-pqc-backend", optional = true }
 
 [profile.release]
 codegen-units = 1
