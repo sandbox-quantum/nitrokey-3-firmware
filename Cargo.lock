@@ -779,11 +779,12 @@ dependencies = [
 [[package]]
 name = "cosey"
 version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39323fe531b92e7acad90b8550b58cec63d29a6c5a56e02de4b25b6aeedbf82e"
 dependencies = [
+ "cfg-if",
  "heapless-bytes",
+ "pqcrypto-dilithium",
  "serde",
+ "serde-big-array",
  "serde_repr",
 ]
 
@@ -880,8 +881,6 @@ dependencies = [
 [[package]]
 name = "ctap-types"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bf6a69fe79c279d4e06b0064d25ee7d05f87d55c06e07a1386043bc14bbd5c6d"
 dependencies = [
  "bitflags 1.3.2",
  "cbor-smol",
@@ -1187,7 +1186,6 @@ dependencies = [
 [[package]]
 name = "fido-authenticator"
 version = "0.1.1"
-source = "git+https://github.com/Nitrokey/fido-authenticator.git?tag=v0.1.1-nitrokey.19#0fdecc93df800543aed0f1de0ea0f7178cf93b80"
 dependencies = [
  "apdu-dispatch",
  "cbor-smol",
@@ -3318,6 +3316,7 @@ dependencies = [
  "nb 1.1.0",
  "p256-cortex-m4",
  "postcard 0.7.3",
+ "pqcrypto-dilithium",
  "rand_chacha",
  "rand_core",
  "salty",
@@ -4008,8 +4007,3 @@ dependencies = [
  "quote",
  "syn 2.0.69",
 ]
-
-[[patch.unused]]
-name = "ctap-types"
-version = "0.2.0"
-source = "git+https://github.com/trussed-dev/ctap-types.git?rev=72eb68b61e3f14957c5ab89bd22f776ac860eb62#72eb68b61e3f14957c5ab89bd22f776ac860eb62"
